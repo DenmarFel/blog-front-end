@@ -2,6 +2,14 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+
+  import { onMount } from 'svelte';
+  let helloWorldMessage = '';
+  onMount(async () => {
+    const response = await fetch('http://localhost:8000/');
+    const data = await response.json();
+    helloWorldMessage = data.body;
+  });
 </script>
 
 <main>
@@ -24,7 +32,10 @@
   </p>
 
   <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
+    Click on the Vite and Svelte logos to learn more!
+  </p>
+  <p>
+    {helloWorldMessage}
   </p>
 </main>
 

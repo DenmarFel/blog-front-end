@@ -45,3 +45,11 @@ If you have state that's important to retain within a component, consider creati
 import { writable } from 'svelte/store'
 export default writable(0)
 ```
+
+## Run
+
+### Run front-end
+```
+npm install
+npm run dev --
+```
