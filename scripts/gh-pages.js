@@ -1,5 +1,5 @@
 import { publish } from 'gh-pages';
 
-publish('dist', function(err){
-    console.log(err)
-});
+publish('dist', {
+    repo: 'https://github.com/DenmarFel/DenmarFel.github.io.git'
+}, function(err){});

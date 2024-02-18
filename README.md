@@ -48,8 +48,11 @@ export default writable(0)
 
 ## Run
 
-### Run front-end
+### Run front-end locally
 ```
 npm install
 npm run dev --
 ```
+
+## Hosting
+Static Site is currently hosted using Github Pages at https://denmarfel.github.io/. I use a package called [gh-pages](https://www.npmjs.com/package/gh-pages) that automatically updates the `gh-pages` branch of a separate [repo](https://github.com/DenmarFel/DenmarFel.github.io) when I run `npm run deploy`. 
