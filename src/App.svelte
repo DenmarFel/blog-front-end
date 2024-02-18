@@ -5,11 +5,11 @@
 
   import { onMount } from 'svelte';
   let helloWorldMessage = '';
-  onMount(async () => {
-    const response = await fetch('http://localhost:3000/json');
-    const data = await response.json();
-    helloWorldMessage = data['data'];
-  });
+  // onMount(async () => {
+  //   const response = await fetch('http://localhost:3000/json');
+  //   const data = await response.json();
+  //   helloWorldMessage = data['data'];
+  // });
 </script>
 
 <main>
