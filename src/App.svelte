@@ -6,9 +6,9 @@
   import { onMount } from 'svelte';
   let helloWorldMessage = '';
   onMount(async () => {
-    const response = await fetch('http://localhost:8000/');
+    const response = await fetch('http://localhost:3000/json');
     const data = await response.json();
-    helloWorldMessage = data.body;
+    helloWorldMessage = data['data'];
   });
 </script>
 
@@ -33,6 +33,7 @@
 
   <p class="read-the-docs">
     Click on the Vite and Svelte logos to learn more!
+    Denmar Test
   </p>
   <p>
     {helloWorldMessage}
