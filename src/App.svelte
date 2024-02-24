@@ -1,19 +1,18 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  let helloWorldMessage = '';
-  onMount(async () => {
-    const response = await fetch('http://localhost:3000/json');
-    const data = await response.json();
-    helloWorldMessage = data['data'];
-  });
+  import { Router, Link, Route } from "svelte-routing";
+  import Home from "./routes/Home.svelte";
+  import Settings from "./routes/Settings.svelte";
+
+  export let url = "";
 </script>
 
-<main>
-  <h1>Denmar Feliciano</h1>
-
-  <p>Software Engineer at Amazon</p>
-  <p>Bachelors in Computer Science from University of California, Irvine</p>
-  <p>What is the meaning of life? {helloWorldMessage}</p>
-</main>
-
-<style></style>
+<Router {url}>
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="/settings">Settings</Link>
+  </nav>
+  <div>
+    <Route path="/settings" component={Settings} />
+    <Route path="/"><Home /></Route>
+  </div>
+</Router>
