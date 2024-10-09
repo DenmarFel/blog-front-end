@@ -1,19 +1,31 @@
-<script lang="ts">
-  import { onMount } from 'svelte';
-  let helloWorldMessage = '';
-  onMount(async () => {
-    const response = await fetch('http://localhost:3000/json');
-    const data = await response.json();
-    helloWorldMessage = data['data'];
-  });
+<script>
+  import Router from 'svelte-spa-router';
+  import Home from './Home.svelte';
+  import Countdown from './Countdown.svelte';
+  import Photos from './Photos.svelte';
+  import Registry from './Registry.svelte';
+
+  const routes = {
+    '/': Home,
+    '/countdown': Countdown,
+    '/photos': Photos,
+    '/registry': Registry,
+  }
 </script>
 
 <main>
-  <h1>Denmar Feliciano</h1>
+  <nav>
+    <a href="#/">Home</a>
+    <a href="#/countdown">Countdown</a>
+    <a href="#/photos">Photos</a>
+    <a href="#/registry">Registry</a>
+  </nav>
 
-  <p>Software Engineer at Amazon</p>
-  <p>Bachelors in Computer Science from University of California, Irvine</p>
-  <p>What is the meaning of life? {helloWorldMessage}</p>
+  <Router {routes} />
 </main>
 
-<style></style>
+<style>
+  nav a {
+    margin-right: 10px;
+  }
+</style>
