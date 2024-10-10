@@ -1,26 +1,34 @@
 <script>
-  import Router from 'svelte-spa-router';
-  import Home from './Home.svelte';
-  import Countdown from './Countdown.svelte';
-  import Photos from './Photos.svelte';
-  import Registry from './Registry.svelte';
+import Router from 'svelte-spa-router';
+import {location} from 'svelte-spa-router';
+import Home from './general/Home.svelte';
+import Wedding from './wedding/Wedding.svelte';
+import Photos from './wedding/Photos.svelte';
+import Registry from './wedding/Registry.svelte';
 
-  const routes = {
-    '/': Home,
-    '/countdown': Countdown,
-    '/photos': Photos,
-    '/registry': Registry,
-  }
+const routes = {
+  '/': Home,
+  '/wedding': Wedding,
+  '/wedding/photos': Photos,
+  '/wedding/registry': Registry,
+}
 </script>
 
-<main>
-  <nav>
-    <a href="#/">Home</a>
-    <a href="#/countdown">Countdown</a>
-    <a href="#/photos">Photos</a>
-    <a href="#/registry">Registry</a>
-  </nav>
 
+<nav>
+  {#if $location === '/'}
+  <a href="#/">Home</a>
+  <a href="#/wedding">Wedding</a>
+  {/if}
+
+  {#if $location.startsWith('/wedding') }
+  <a href="#/wedding">Wedding</a>
+  <a href="#/wedding/photos">Photos</a>
+  <a href="#/wedding/registry">Registry</a>
+  {/if}
+</nav>
+
+<main>
   <Router {routes} />
 </main>
 

@@ -13,7 +13,7 @@ let countdown = daysUntil('2026-05-30');
 </script>
 
 <main>
-    <h1>Countdown</h1>
+    <h1>Wedding</h1>
     {#if countdown == 0}
         <p>Today is the day!</p>
     {:else if countdown > 0}
