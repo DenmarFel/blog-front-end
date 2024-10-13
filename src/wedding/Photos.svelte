@@ -11,17 +11,35 @@
         }
         image_links = temp_links;
     });
+
+    let expandedImage = "";
+    function expandImage(event) {
+        let miniImageSrc = event.currentTarget.lastElementChild.src;
+        expandedImage = miniImageSrc
+
+        let imageDialog = document.getElementById("imageViewer");
+        imageDialog.showModal();
+
+        const myDiv = document.getElementById('myDiv');
+        myDiv.addEventListener('click', (event) => event.stopPropagation());
+    }
 </script>
 
 <main>
     <h1>Photos</h1>
     <div class="flex-container">
         {#each image_links as link}
-            <div class="square">
+            <div class="square" on:click={expandImage}>
                 <img loading="lazy" src="{link}" alt="">
             </div>
         {/each}
     </div>
+    
+    <dialog id="imageViewer" on:click={(self) => self.currentTarget.close()}>
+       <div id="myDiv">
+            <img id="expandedImage" src={expandedImage} alt="">
+       </div>
+    </dialog>
 </main>
 
 <style>
@@ -43,5 +61,14 @@
         height: 100%;
         object-fit: cover;
         image-rendering: -webkit-optimize-contrast; /* for Chrome */
+    }
+
+    .square img:hover {
+        transform: scale(1.01);
+    }
+
+    #expandedImage {
+        max-width: 90vw;
+        max-height: 70vh;
     }
 </style>

@@ -10,6 +10,8 @@ function daysUntil(targetDate) {
 }
 
 let countdown = daysUntil('2026-05-30');
+
+let googleCalendarLink = "https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Charlene+and+Denmar&dates=20260531T000000Z/20260531T053000Z&details=Test&location=&trp=false&sf=tr";
 </script>
 
 <main>
@@ -21,4 +23,10 @@ let countdown = daysUntil('2026-05-30');
     {:else}
         <p>Thank you for coming!</p>
     {/if}
+
+    <a href="#/wedding/RSVP">RSVP</a>
+
+    <p>Saturday, May 30, 2024, from 5:00 PM to 2:00 PM (PST)</p>
+    <p>Save to <a href={googleCalendarLink} target="_blank">Google</a> · <a href="static/wedding.ics">iPhone</a></p><a href="static/wedding.ics">
+
 </main>
