@@ -27,6 +27,6 @@ let googleCalendarLink = "https://www.google.com/calendar/render?action=TEMPLATE
     <a href="#/wedding/RSVP">RSVP</a>
 
     <p>Saturday, May 30, 2024, from 5:00 PM to 2:00 PM (PST)</p>
-    <p>Save to <a href={googleCalendarLink} target="_blank">Google</a> · <a href="static/wedding.ics">iPhone</a></p><a href="static/wedding.ics">
+    <p>Save to <a href={googleCalendarLink} target="_blank">Google</a> · <a href="public/wedding.ics">iPhone</a></p><a href="static/wedding.ics">
 
 </main>

@@ -15,6 +15,7 @@
     let expandedImage = "";
     function expandImage(event) {
         let miniImageSrc = event.currentTarget.lastElementChild.src;
+        console.log(miniImageSrc);
         expandedImage = miniImageSrc
 
         let imageDialog = document.getElementById("imageViewer");
@@ -29,12 +30,14 @@
     <h1>Photos</h1>
     <div class="flex-container">
         {#each image_links as link}
-            <div class="square" on:click={expandImage}>
+            <button class="square" on:click={expandImage}>
                 <img loading="lazy" src="{link}" alt="">
-            </div>
+            </button>
         {/each}
     </div>
     
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <dialog id="imageViewer" on:click={(self) => self.currentTarget.close()}>
        <div id="myDiv">
             <img id="expandedImage" src={expandedImage} alt="">
@@ -54,6 +57,15 @@
         width: 32%;
         aspect-ratio: 1/1;
         margin: 2px;
+
+        /* Remove Button Default CSS */
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
     }
 
     .square img {
