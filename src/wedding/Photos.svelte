@@ -45,42 +45,40 @@
     </dialog>
 </main>
 
-<style>
-    .flex-container {
-        display: flex;
-        max-width: 930px;
-        margin: 0 auto;
-        flex-wrap: wrap;
-    }
+<style lang="sass">
+    .flex-container 
+        display: flex
+        margin: 0 auto
+        flex-wrap: wrap
+        justify-content: center
 
-    .square {
-        width: 32%;
-        aspect-ratio: 1/1;
-        margin: 2px;
+    .square 
+        max-width: 300px
+        width: 32%
+        aspect-ratio: 1/1
+        margin-right: 2px
+        margin-bottom: 3px
 
         /* Remove Button Default CSS */
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-    }
+        background: none
+        color: inherit
+        border: none
+        padding: 0
+        font: inherit
+        cursor: pointer
+        outline: inherit
 
-    .square img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        image-rendering: -webkit-optimize-contrast; /* for Chrome */
-    }
+        img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+            image-rendering: -webkit-optimize-contrast /* for Chrome */
 
-    .square img:hover {
-        transform: scale(1.01);
-    }
-
-    #expandedImage {
-        max-width: 90vw;
-        max-height: 70vh;
-    }
+            &:hover
+                transform: scale(1.01)
+    
+    #expandedImage 
+        max-width: 90vw
+        max-height: 90vh
+    
 </style>
