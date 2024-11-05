@@ -15,6 +15,7 @@ import chapter5 from './threeJsJourney/chapter5.svelte';
 import chapter6 from './threeJsJourney/chapter6.svelte';
 import chapter7 from './threeJsJourney/chapter7.svelte';
 import chapter8 from './threeJsJourney/chapter8.svelte';
+import chapter9 from './threeJsJourney/chapter9.svelte';
 
 const routes = {
   '/': Home,
@@ -25,6 +26,7 @@ const routes = {
   '/threeJsJourney/chapter6': chapter6,
   '/threeJsJourney/chapter7': chapter7,
   '/threeJsJourney/chapter8': chapter8,
+  '/threeJsJourney/chapter9': chapter9,
   '/wedding': Wedding,
   '/wedding/photos': Photos,
   '/wedding/registry': Registry,
