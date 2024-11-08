@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "gsap": "3.12",
+    "lil-gui": "^0.20.0",
     "svelte-spa-router": "^4.0.1"
   }
 }

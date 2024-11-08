@@ -36,7 +36,7 @@ scene.add(camera)
 
 onMount(() => {
     // Canvas
-    const canvas = document.querySelector('canvas#webgl1')
+    const canvas = document.querySelector('canvas#webgl')
 
     // OrbitControls
     const controls = new OrbitControls(camera, canvas);
@@ -129,12 +129,12 @@ onMount(() => {
     Your pixel ratio is: window.devicePixelRatio = {window.devicePixelRatio}
 </p>
 <h3>Handle Full screen</h3>
-<canvas id="webgl1"></canvas>
+<canvas id="webgl"></canvas>
 </main>
 
 <style>
 #webgl {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     outline: none;

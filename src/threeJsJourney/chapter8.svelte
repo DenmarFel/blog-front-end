@@ -59,6 +59,7 @@ onMount(() => {
     // OrbitControls
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true
+    controls.enableZoom = false
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({
@@ -165,12 +166,18 @@ these vertices to create terrain, texture, noise, etc.
     We use a Float32Array (typed array, can only store floats, fixed length,
     easier to handle for computer). Two ways to create and fill a Float32Array.
 </p>
+<h3>Index</h3>
+<p>
+Some geometry have faces that share common vertices (ex: cube). You can
+specify which of these vertices are shared which reduces data sent to GPU. This 
+is an optimization. More complex but more efficient. Will not be covered here.
+</p>
 <canvas id="webgl1"></canvas>
 </main>
 
 <style>
-#webgl {
-    position: fixed;
+#webgl1 {
+    /* position: fixed; */
     top: 0;
     left: 0;
     outline: none;

@@ -11,7 +11,6 @@ const gui = new GUI({
     title: 'Debugger',
     closeFolders: true
 })
-
 function toggleGui(event) {
     if (event.key == 'h') gui.show(gui._hidden)
 }
@@ -129,7 +128,6 @@ onMount(() => {
     }
     tick()
 })
-
 onDestroy(() => {
     gui.hide()
     window.removeEventListener('keydown', toggleGui)
@@ -137,40 +135,8 @@ onDestroy(() => {
 </script>
 
 <main>
-<h2>Lesson 9: Debug UI</h2>
-<h3>Different types of tweaks with lil-gui</h3>
-<ul>
-    <li>Range - for numbers with min and max</li>
-    <li>Color - for colors w/ various formats</li>
-    <li>Text - for simple text</li>
-    <li>Checkbox - for booleans (true, false)</li>
-    <li>Select - for choice from list of values</li>
-    <li>Button - to trigger functions</li>
-</ul>
-<p>
-    Most tweaks can be added using <code>gui.add(...)</code>. Params are object
-    and the property of that object you want to change. You can only tweak
-    properties of objects.
-</p>
-<h3>Tweaks for non properties</h3>
-<p>Use objects (see source code)</p>
-<h3>Tweaking the geometry</h3>
-<p>
-    Tweaked geometries cannot be altered. They are only calculated once. To
-    tweak geometry, you have to create a new one each time.
-</p>
-<p>
-    Use <code>onFinishChange()</code> to update geometry instead of <code>
-    onChange() </code> as it is very CPU intensive. Also remember to dispose of
-    old geometry using <code>mesh.geometry.dispose()</code> to prevent GPU
-    memory leaks. 
-</p>
-<h3>Folder</h3>
-<p>
-    Call <code>gui.addFolder()</code> to categorize tweaks
-</p>
-<h3>Toggling gui</h3>
-<p>Press h to reveal/hide debugger</p>
+<h2>Lesson 10: Textures</h2>
+
 <canvas id="webgl"></canvas>
 </main>
 

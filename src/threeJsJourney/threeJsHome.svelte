@@ -9,5 +9,6 @@
     <li><a href="#/threeJsJourney/chapter7">Lesson 7: Fullscreen and resizing</a></li>
     <li><a href="#/threeJsJourney/chapter8">Lesson 8: Geometries</a></li>
     <li><a href="#/threeJsJourney/chapter9">Lesson 9: Debug UI</a></li>
+    <li><a href="#/threeJsJourney/chapter10">Lesson 10: Textures</a></li>
 </ul>
 </main>
