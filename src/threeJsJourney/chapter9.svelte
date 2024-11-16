@@ -11,7 +11,7 @@ const gui = new GUI({
     title: 'Debugger',
     closeFolders: true
 })
-
+gui.hide()
 function toggleGui(event) {
     if (event.key == 'h') gui.show(gui._hidden)
 }
@@ -138,6 +138,7 @@ onDestroy(() => {
 
 <main>
 <h2>Lesson 9: Debug UI</h2>
+<p>Press h to toggle debugger</p>
 <h3>Different types of tweaks with lil-gui</h3>
 <ul>
     <li>Range - for numbers with min and max</li>

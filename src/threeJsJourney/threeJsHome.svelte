@@ -10,5 +10,6 @@
     <li><a href="#/threeJsJourney/chapter8">Lesson 8: Geometries</a></li>
     <li><a href="#/threeJsJourney/chapter9">Lesson 9: Debug UI</a></li>
     <li><a href="#/threeJsJourney/chapter10">Lesson 10: Textures</a></li>
+    <li><a href="#/threeJsJourney/chapter11">Lesson 11: Materials</a></li>
 </ul>
 </main>
