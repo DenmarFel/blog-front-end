@@ -11,5 +11,8 @@
     <li><a href="#/threeJsJourney/chapter9">Lesson 9: Debug UI</a></li>
     <li><a href="#/threeJsJourney/chapter10">Lesson 10: Textures</a></li>
     <li><a href="#/threeJsJourney/chapter11">Lesson 11: Materials</a></li>
+    <li><a href="#/threeJsJourney/chapter23">Lesson 23: Custom models w/ Blender</a></li>
+    <li><a href="#/threeJsJourney/chapter49">Lesson 49: Creating a scene in Blender</a></li>
+
 </ul>
 </main>

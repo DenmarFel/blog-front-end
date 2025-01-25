@@ -52,12 +52,12 @@
         flex-wrap: wrap
         justify-content: center
 
-    .square 
-        max-width: 300px
+    .square
+        max-width: 275px
         width: 32%
         aspect-ratio: 1/1
-        margin-right: 2px
-        margin-bottom: 3px
+        margin-right: 30px
+        margin-bottom: 30px
 
         /* Remove Button Default CSS */
         background: none
@@ -76,7 +76,11 @@
 
             &:hover
                 transform: scale(1.01)
-    
+            
+            /* Rounded Corners */
+            border-radius: 30px
+            box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.1)
+
     #expandedImage 
         max-width: 90vw
         max-height: 90vh

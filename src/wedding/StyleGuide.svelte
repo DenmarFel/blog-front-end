@@ -90,8 +90,11 @@
     </ul>
     <h2>Inspiration</h2>
     <ul>
-        <li><a href="https://veleyross.wedding/">Marry Monday</a></li>
-        <li><a href="https://jenhuangphoto.com/">Jen Huang Photo</a></li>
+      <li><a href="https://veleyross.wedding/">Marry Monday</a></li>
+      <li><a href="https://jenhuangphoto.com/">Jen Huang Photo</a></li>
+      <li><a href="https://www.curateentertainment.com/">Curate Entertainment</a></li>
+      <li><a href="https://www.michelleandtonye.com/">Michelle & Tonye</a></li>
+      <li><a href="https://prior.co.jp/discover/en">Prior</a></li>
     </ul>
 
 </main>
